@@ -38,7 +38,7 @@ height: 50px;
     z-index: 5;
 }
 
-    #winner {
+    #winner div {
         height: 50px;
         width: 50px;
         background-color: blue;

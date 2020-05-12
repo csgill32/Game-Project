@@ -1,14 +1,13 @@
 const createBarriers = (num) => {
     let i = 0;
     for (i; i < num; i++) {
-        const template = `<div class = "barrier" id='${i}'>Barrier${i}</div>`;
-        console.log(template);
-        $('.container').append(template);
+        const $barrier = $(`<div class = "barrier" id='${i}'></div>`);
+        $('.container').append($barrier);
     }
     let winner = Math.floor(Math.random() * num);
-    const randomElement = $(`#${winner}`);
-    let element = $(`<div id = "winner">Winner</div>`);
-    randomElement.append(element);
+    const $randomElement = $(`#${winner}`);
+    let $element = $(`<div id = "winner"></div>`);
+    $randomElement.append($element);
 };
 createBarriers(4);
 
