@@ -1,10 +1,7 @@
-/* .container {
-    border: 2px solid black;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-
-} */
+.container {
+border: 2px solid black;
+width: 60%;
+}
 
 h1 {
     width: auto;
@@ -30,20 +27,28 @@ height: 50px;
 
 }
 
-.empty div {
+.barrier {
     height: 50px;
     width: 50px;
     background-color: black;
     border-radius: 50%;
     margin: 20px;
+    color: red;
+    position: relative;
+    z-index: 5;
 }
 
-    .winner div {
+    #winner {
         height: 50px;
         width: 50px;
         background-color: blue;
         border-radius: 50%;
-        margin: 20px;
+        color: yellow;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    
 }
 
 section {

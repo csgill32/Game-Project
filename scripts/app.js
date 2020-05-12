@@ -1,29 +1,59 @@
-const createDivs = (num) => {
+const createBarriers = (num) => {
     let i = 0;
     for (i; i < num; i++) {
-        const template = `<div id='${i}'>Circle${i}</div>`;
+        const template = `<div class = "barrier" id='${i}'>Barrier${i}</div>`;
         console.log(template);
         $('.container').append(template);
     }
     let winner = Math.floor(Math.random() * num);
     const randomElement = $(`#${winner}`);
-    let element = $(`<div>Top Secret</div>`);
+    let element = $(`<div id = "winner">Winner</div>`);
     randomElement.append(element);
 };
-createDivs(4);
+createBarriers(4);
+
+// const handleClick = event => {
+//     if (event.target.classList.contains("clicked") === false) {
+//         $(event.target).addClass("clicked");
+//     }
+// }
+// $('.barrier').on('click', handleClick);
+
+
+/* This gives all but one the class "winner"*/
 
 // const createDivs = (num) => {
 //     let i = 0;
 //     for (i; i < num; i++) {
-//       const template = `
-//       <div id='${i}'>Circle ${i}</div>
-//       `;
-//       $('.container').append(template);
+//         const $template = $(`<div class="empty" id='${i}'>Circle${i}</div>`);
+//         console.log($template);
+//         $('.container').append($template);
+//         let $templateEl = $("div .empty");
+//         let $random = Math.floor(Math.random() * $templateEl.length)
+//         $templateEl.eq($random % $templateEl.length).addClass("winner");
 //     }
-//     let secret = Math.floor(Math.random() * num);
-//     const randowElement = $(`#${secret}`);
-//     let element = $('<div>Top Secret</div>');
-//     randowElement.append(element);
-//   };
-//   createDivs(4);
 
+// const createDivs = (num) => {
+//     let i = 0;
+//     for (i; i < num; i++) {
+//         const $template = $(`<div class="empty" id='${i}'>Circle${i}</div>`);
+//         console.log($template);
+//         $('.container').append($template);
+//         let $randomElement = $(".empty");
+//         $randomElement.eq(Math.floor(Math.random() * $randomElement.length)).addClass("winner");
+//     }
+// };
+// createDivs(4);
+
+// const createDivs = (num) => {
+//     let i = 0;
+//     for (i; i < num; i++) {
+//         const $template = $(`<div class="empty" id='${i}'>Circle${i}</div>`);
+//         console.log($template);
+//         $('.container').append($template);
+//         let $randomIndex = Math.floor(Math.random() * num);
+//         let $randomElement = $(".empty");
+//         $randomElement.eq($randomIndex).addClass("winner");
+//     }
+// };
+// createDivs(4);
