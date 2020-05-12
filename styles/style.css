@@ -1,29 +1,69 @@
-.barriers div {
+/* .container {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+} */
+
+h1 {
+    width: auto;
+    text-align: center;
+}
+
+aside {
+    float: right;
+    border: 2px solid orange;
+    width: 30%;
+    margin: 20px;
+    padding: 10px;
+    margin-top: -10px;
+}
+
+.round {
+display: flex;
+justify-content: center;
+align-items: center;
+border: 2px solid pink;
+width: 30%;
+height: 50px;
+
+}
+
+.empty div {
     height: 50px;
     width: 50px;
     background-color: black;
     border-radius: 50%;
     margin: 20px;
-    display: inline-block;
-    position: relative;
-    z-index: 2;
 }
 
-    .soup div {
-        height: 25px;
-        width: 25px;
+    .winner div {
+        height: 50px;
+        width: 50px;
         background-color: blue;
         border-radius: 50%;
         margin: 20px;
-        display: inline-block;
-        position: absolute;
-        z-index: 3;
 }
 
-aside {
-    align-content: flex-end;
+section {
+    border: 2px solid red;
+    display: flex;
+    width: 80%;
+}
+
+.lives-remaining {
+    border: 2px solid green;
+    text-align: center;
+    width: 40%;
+    
+}
+
+.lives-lost {
+    border: 2px solid black;
+    width: 60%;
 }
 
 .clicked {
-    z-index: 1;
+    opacity: .2;
 }
