@@ -1,31 +1,53 @@
-.container {
-border: 2px solid black;
-width: auto;
+body {
+background-color: rgb(93, 79, 70);
+color: rgb(45,27,33);
 }
 
 h1 {
     width: auto;
     text-align: center;
+    font-family: 'Luckiest Guy', cursive;
+}
+
+section.upper-stuff {
+    display: flex;
+    justify-content: space-evenly;
+    }
+
+img {
+    border-radius: 50%;
+    margin: 20px;
 }
 
 aside {
     float: right;
-    border: 2px solid orange;
-    width: 20%;
+    /* border: 2px solid black; */
+    width: 30%;
     margin: 20px;
     padding: 10px;
-    margin-top: -10px;
+    
 }
 
-.round {
-display: flex;
-justify-content: center;
-align-items: center;
-border: 2px solid pink;
-width: 30%;
-height: 50px;
-
+h2 {
+    text-align: center;
+    font-family: 'Luckiest Guy', cursive;
 }
+
+li {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+}
+
+
+.container {
+    /* border: 2px solid black; */
+    width: auto;
+    height: auto;
+    margin: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
 
 .barrier {
     height: 50px;
@@ -33,9 +55,9 @@ height: 50px;
     background-color: black;
     border-radius: 50%;
     margin: 20px;
-    color: red;
     position: relative;
     z-index: 5;
+    
 }
 
     #winner div {
@@ -56,23 +78,7 @@ height: 50px;
     width: 60px;
     border-radius: 50%;
 }
-section {
-    border: 2px solid red;
-    display: flex;
-    width: 80%;
-}
 
-.lives-remaining {
-    border: 2px solid green;
-    text-align: center;
-    width: 40%;
-    
-}
-
-.lives-lost {
-    border: 2px solid black;
-    width: 60%;
-}
 
 .clicked {
     background-image: url('https://i.imgur.com/75bu5u5.jpg?1');
@@ -82,3 +88,13 @@ section {
     border-radius: 50%;
 }
 
+section.scoreboard {
+    /* border: 2px solid black; */
+    width: auto;
+    height: 50px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
