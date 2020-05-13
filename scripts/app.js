@@ -17,48 +17,59 @@ const createBarriers = (num) => {
     let $element = $(`<div id = "winner"></div>`);
     $randomElement.append($element);
 };
-createBarriers(4);
+// createBarriers(4);
 
-const $winner = $('article div#winner');
-console.log($winner);
-$winner.on("click", function (event) {
-    console.log("winner click");
-})
+let round = 1;
+const updateRound = () => {
+    $('#round').text(`Round: ${round}`);
+}
+
+let lives = 3;
+const updateLives = () => {
+    $('#lives').text(`Lives Remaining: ${lives}`);
+}
+
+const setUpRound = () => {
+    updateRound();
+    $('.barriers').empty();
+    if (round === 1) {
+        createBarriers(5);
+    } else if (round === 2) {
+        createBarrier(8);
+    } else if (round === 3) {
+        createBarriers(10);
+    } else {
+        $('h1').text(`SOUP'S UP`);
+    }
+}
+setUpRound();
 
 
 const handleClick = event => {
-    // if (event.target.contains("div #winner")) {
-    //     $(event.target).addClass("appear")
-    // }
     if ($(event.target).children().length) {
-        $(event.target).addClass("appear")
-        round++
-    } else if (event.target.classList.contains("clicked") === false) {
-        $(event.target).addClass("clicked");
-    }
+        $(event.target).addClass("appear");
+        const $winningClass = $('.appear');
+        round++;
+        // stop round
+        //move to next round
+    } else $(event.target).addClass("clicked");
 }
-$('.barrier').on('click', handleClick);
 
-// let round = 1;
+$('article').on('click', handleClick);
 
-// const updateRound = () => {
-//     $('#round').text(`Round: ${round}`);
-// }
 
-// const setUpRound = () => {
-//     updateRound();
-//     $('.barriers').empty();
-//     if (round === 1) {
-//         createBarriers(5);
-//     } else if (round === 2) {
-//         createSquares(8);
-//     } else if (round === 3) {
-//         createSquares(10);
-//     } else {
-//         $('h1').text(`SOUP'S UP`);
+// if there are three articles with the class "clicked", then you lose and go back to round 1
+
+
+// const handleLoserClick = event => {
+//     if (event.target.classList.contains("clicked") === false) {
+//         $(event.target).addClass("clicked");
 //     }
 // }
-// setUpRound();
+// $('.barrier').on('click', handleLoserClick);
+
+
+
 
 
 /* This gives all but one the class "winner"*/
