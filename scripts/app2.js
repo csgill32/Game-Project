@@ -61,3 +61,18 @@ const divs = () => {
     }
     let secret = Math.floor(Math.random() * divId)
 } secret.
+
+// const setUpRound = () => {
+//     updateRound();
+//     $('.barriers').empty();
+//     if (round === 1) {
+//         createBarriers(5);
+//     } else if (round === 2) {
+//         createSquares(8);
+//     } else if (round === 3) {
+//         createSquares(10);
+//     } else {
+//         $('h1').text(`SOUP'S UP`);
+//     }
+// }
+// setUpRound();

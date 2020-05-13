@@ -1,17 +1,18 @@
 body {
-background-color: rgb(93, 79, 70);
-color: rgb(45,27,33);
+background-color: rgb(129, 114, 91);
+color: rgb(37, 25, 27);
 }
 
 h1 {
     width: auto;
     text-align: center;
+    font-size: 5em;
     font-family: 'Luckiest Guy', cursive;
 }
 
 section.upper-stuff {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     }
 
 img {
@@ -20,22 +21,24 @@ img {
 }
 
 aside {
-    float: right;
+    /* float: right; */
     /* border: 2px solid black; */
     width: 30%;
     margin: 20px;
-    padding: 10px;
+   
     
 }
 
 h2 {
     text-align: center;
     font-family: 'Luckiest Guy', cursive;
+    font-size: 3em;
 }
 
 li {
     font-family: 'Raleway', sans-serif;
     line-height: 1.5em;
+    font-size: 1.2em;
 }
 
 
@@ -50,9 +53,9 @@ li {
     }
 
 .barrier {
-    height: 50px;
-    width: 50px;
-    background-color: black;
+    height: 200px;
+    width: 200px;
+    background-image: url('https://i.imgur.com/yHbg8jT.png?1');
     border-radius: 50%;
     margin: 20px;
     position: relative;
@@ -72,19 +75,19 @@ li {
 }
 
 .appear {
-    background-image: url('https://i.imgur.com/rQXydA5.jpg?2');
+    background-image: url('https://i.imgur.com/XIid4J9.png?1');
     background-repeat: no-repeat;
-    height: 60px;
-    width: 60px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
 }
 
 
 .clicked {
-    background-image: url('https://i.imgur.com/75bu5u5.jpg?1');
+    background-image: url('https://i.imgur.com/XhNzxe9.jpg?1');
     background-repeat: no-repeat;
-    height: 60px;
-    width: 60px;
+    height: 150px;
+    width: 150px;
     border-radius: 50%;
 }
 
@@ -92,8 +95,10 @@ section.scoreboard {
     /* border: 2px solid black; */
     width: auto;
     height: 50px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 1.5em;
     line-height: 1.5em;
+    margin-top: 40px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
