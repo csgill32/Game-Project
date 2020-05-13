@@ -53,12 +53,12 @@ const handleClick = event => {
         $(event.target).addClass("appear");
         // window.alert('WIN!');
         round++;
-        // lives = 3;
+        // lives++3;
         setUpRound();
-        updateLives();
-        // stop round
-        //move to next round
+        // updateLives();
+
     } else $(event.target).addClass("clicked");
+
     if ($(event.target.classList.contains("clicked"))) {
         console.log("Bad click");
         lives--;
