@@ -52,10 +52,13 @@ const handleClick = event => {
     if ($(event.target).children().length) {
         $(event.target).addClass("appear");
         // window.alert('WIN!');
-        round++;
-        lives = 4;
-        setUpRound();
-        updateLives();
+        let seeSoup = setTimeout(function () {
+            round++;
+            lives = 3;
+            setUpRound();
+            updateLives();
+        }, 2000);
+
 
     } else $(event.target).addClass("clicked");
 
