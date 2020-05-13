@@ -41,9 +41,7 @@ height: 50px;
     #winner div {
         height: 50px;
         width: 50px;
-        background-color: blue;
         border-radius: 50%;
-        color: yellow;
         position: absolute;
         top: 0;
         left: 0;
@@ -54,8 +52,9 @@ height: 50px;
 .appear {
     background-image: url('https://i.imgur.com/rQXydA5.jpg?2');
     background-repeat: no-repeat;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
 }
 section {
     border: 2px solid red;
@@ -76,6 +75,10 @@ section {
 }
 
 .clicked {
-    opacity: .2;
+    background-image: url('https://i.imgur.com/75bu5u5.jpg?1');
+    background-repeat: no-repeat;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
 }
 

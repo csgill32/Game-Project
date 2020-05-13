@@ -48,11 +48,14 @@ setUpRound();
 const handleClick = event => {
     if ($(event.target).children().length) {
         $(event.target).addClass("appear");
-        const $winningClass = $('.appear');
-        round++;
+        window.alert('WIN!');
         // stop round
         //move to next round
     } else $(event.target).addClass("clicked");
+    if ($('.clicked').length > 2) {
+        window.alert("TOO MANY CLICKS");
+        // restart
+    }
 }
 
 $('article').on('click', handleClick);
