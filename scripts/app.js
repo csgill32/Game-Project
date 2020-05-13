@@ -37,7 +37,7 @@ const setUpRound = () => {
         createBarriers(5);
     } else if (round === 2) {
         createBarriers(8);
-        // lives = 3;
+        updateLives();
     } else if (round === 3) {
         createBarriers(10);
         // lives = 3;
@@ -53,9 +53,9 @@ const handleClick = event => {
         $(event.target).addClass("appear");
         // window.alert('WIN!');
         round++;
-        // lives++3;
+        lives = 4;
         setUpRound();
-        // updateLives();
+        updateLives();
 
     } else $(event.target).addClass("clicked");
 
@@ -77,7 +77,7 @@ const handleClick = event => {
 $section.on('click', 'article', handleClick);
 
 // for (i = 0; i <= $section.length; i++) {
-    //     if ($section.classList.contains("clicked")) {
-    //         lives--;
-    //     }
-    // }
+//     if ($section.classList.contains("clicked")) {
+//         lives--;
+//     }
+// }
