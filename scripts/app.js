@@ -45,7 +45,7 @@ const setUpRound = () => {
         createBarriers(8);
         // lives = 3;
     } else {
-        $('h1').text(`SOUP'S UP`);
+        $('h1').text(`SOUP'S UP`).addClass('bounce-in-top');
         $('section').hide();
         $('div.gif').show();
         // $('button').show();
@@ -95,7 +95,6 @@ const handleClick = event => {
     // }
 
     if ($(event.target.classList.contains("clicked"))) {
-
         lives--;
         updateLives();
 
