@@ -59,6 +59,13 @@ const setUpRound = () => {
 }
 setUpRound();
 
+const noSoup = new Audio();
+noSoup.src = 'https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=No+Soup+For+You!&filename=od/ODQ1Mzg3NzU4NDU0Njk_xIiyMyRzqxo.mp3';
+
+const playSound = event => {
+    noSoup.play();
+}
+
 const handleClick = event => {
     if ($(event.target).children().length) {
         $(event.target).addClass("appear");
@@ -73,6 +80,7 @@ const handleClick = event => {
 
     } else $(event.target).addClass("clicked");
     if ($(event.target.classList.contains("clicked"))) {
+        playSound();
         lives--;
         updateLives();
 
@@ -88,13 +96,15 @@ const handleClick = event => {
 
 $section.on('click', 'article', handleClick);
 
-const noSoup = new Audio();
-noSoup.src = 'https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=No+Soup+For+You!&filename=od/ODQ1Mzg3NzU4NDU0Njk_xIiyMyRzqxo.mp3';
 
-const $soundTime = $('article.barrier');
-$soundTime.click(function (event) {
-    noSoup.play();
-});
+// const $soundTime = $('article.barrier');
+// $soundTime.click(function (event) {
+//     noSoup.play();
+// });
+
+// const playSound = event => {
+//     noSoup.play();
+// }
 
 $('button').click(function () {
     location.reload(true);
