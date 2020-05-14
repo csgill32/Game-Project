@@ -1,3 +1,6 @@
+$('div.gif').hide();
+// $('button').hide();
+
 const $section = $('<section class="container"></section>');
 const $body = $('body');
 
@@ -36,13 +39,22 @@ const setUpRound = () => {
     if (round === 1) {
         createBarriers(5);
     } else if (round === 2) {
-        createBarriers(8);
+        createBarriers(6);
         updateLives();
     } else if (round === 3) {
-        createBarriers(10);
+        createBarriers(8);
         // lives = 3;
     } else {
         $('h1').text(`SOUP'S UP`);
+        $('section').hide();
+        $('div.gif').show();
+        // $('button').show();
+        // const $winPage = $('<img class = "yoda"></img>');
+        // const $header = $('header');
+        // $header.append($winPage);
+        // $winPage.show();
+
+
     }
 }
 setUpRound();
@@ -57,13 +69,11 @@ const handleClick = event => {
             lives = 3;
             setUpRound();
             updateLives();
-        }, 2000);
-
+        }, 1000);
 
     } else $(event.target).addClass("clicked");
 
     if ($(event.target.classList.contains("clicked"))) {
-        console.log("Bad click");
         lives--;
         updateLives();
 
@@ -75,12 +85,11 @@ const handleClick = event => {
         updateLives();
         // restart
     }
+
 }
 
 $section.on('click', 'article', handleClick);
 
-// for (i = 0; i <= $section.length; i++) {
-//     if ($section.classList.contains("clicked")) {
-//         lives--;
-//     }
-// }
+$('button').click(function () {
+    location.reload(true);
+});
