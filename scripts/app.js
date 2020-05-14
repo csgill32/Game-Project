@@ -61,26 +61,41 @@ setUpRound();
 
 const noSoup = new Audio();
 noSoup.src = 'https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=No+Soup+For+You!&filename=od/ODQ1Mzg3NzU4NDU0Njk_xIiyMyRzqxo.mp3';
-
-const playSound = event => {
+const playSoup = event => {
     noSoup.play();
+}
+
+const wantBread = new Audio();
+wantBread.src = 'https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=You+Want+Bread%3f&filename=nt/NTE5Mzg3NzU1MTkzNTA_8VkeleBsMUQ.mp3';
+const playBread = event => {
+    wantBread.play();
 }
 
 const handleClick = event => {
     if ($(event.target).children().length) {
         $(event.target).addClass("appear");
         // window.alert('WIN!');
+        playBread();
         let seeSoup = setTimeout(function () {
             round++;
             lives = 3;
+
             setUpRound();
             updateLives();
-        }, 1000);
+        }, 1500);
 
 
-    } else $(event.target).addClass("clicked");
+    } else {
+        $(event.target).addClass("clicked");
+        playSoup();
+    }
+
+    // if ($(event.target.hasChildNodes() === false)) {
+    //     playSoup();
+    // }
+
     if ($(event.target.classList.contains("clicked"))) {
-        playSound();
+
         lives--;
         updateLives();
 
