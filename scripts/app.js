@@ -59,7 +59,6 @@ const setUpRound = () => {
 }
 setUpRound();
 
-
 const handleClick = event => {
     if ($(event.target).children().length) {
         $(event.target).addClass("appear");
@@ -71,8 +70,8 @@ const handleClick = event => {
             updateLives();
         }, 1000);
 
-    } else $(event.target).addClass("clicked");
 
+    } else $(event.target).addClass("clicked");
     if ($(event.target.classList.contains("clicked"))) {
         lives--;
         updateLives();
@@ -85,11 +84,19 @@ const handleClick = event => {
         updateLives();
         // restart
     }
-
 }
 
 $section.on('click', 'article', handleClick);
 
+const noSoup = new Audio();
+noSoup.src = 'https://www.soundboard.com/handler/DownLoadTrack.ashx?cliptitle=No+Soup+For+You!&filename=od/ODQ1Mzg3NzU4NDU0Njk_xIiyMyRzqxo.mp3';
+
+const $soundTime = $('article.barrier');
+$soundTime.click(function (event) {
+    noSoup.play();
+});
+
 $('button').click(function () {
     location.reload(true);
 });
+
