@@ -14,11 +14,11 @@ Player gets 3 chances to find soup each round by clicking the helmet.
 First round has 5 helmets
 Each round, 2 additional helmets are added.
 
-Player only gets to progress to the next level if they find Baby Yoda’s soup.
+Player only gets to progress to the next level if they find Baby Yoda’s soup (bowl will be displayed).
 Number of lives remaining will be displayed
 If they do not find it, they return to Level 1
 
-Every time an empty helmet is clicked, the image of Soup Man (from Seinfeld) will appear along with the sound “NO SOUP FOR YOU!” 
+Every time an empty helmet is clicked, the image of Soup Man (from Seinfeld) will appear.
 
 If Player completes round 3, they win! Winning screen appears.
 Option to play again by click of button 
