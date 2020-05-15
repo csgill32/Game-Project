@@ -29,4 +29,4 @@ Increase number of rounds & difficulty
 Add timing function
 Would love to spend extra time on visual appeal
 
-![Image Description Text](~sei/baby-yoda/Game-Project/Wireframe.jpg)
+![Wireframe](https://github.com/csgill32/Game-Project/blob/master/Wireframe.jpg?raw=true)
