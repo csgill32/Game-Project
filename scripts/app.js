@@ -120,7 +120,20 @@ $section.on('click', 'article', handleClick);
 //     noSoup.play();
 // }
 
-$('button').click(function () {
+$('button.replay').click(function () {
     location.reload(true);
 });
 
+$('button.mute').click(function () {
+    noSoup.muted = true | false;
+    wantBread.muted = true | false;
+})
+
+// const $muteButton = $('button.mute');
+// $muteButton.on('click', function (mute) {
+//     if (Audio.muted) {
+//         Audio.muted = false;
+//     } else {
+//         Audio.muted = true;
+//     }
+// })
