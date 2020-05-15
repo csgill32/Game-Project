@@ -90,16 +90,12 @@ const handleClick = event => {
         playSoup();
     }
 
-    // if ($(event.target.hasChildNodes() === false)) {
-    //     playSoup();
-    // }
-
     if ($(event.target.classList.contains("clicked"))) {
         lives--;
         updateLives();
 
     }
-    if ($('.clicked').length > 2) {
+    if ($('.clicked').length > 2 || lives < 1) {
         round = 1;
         lives = 3;
         setUpRound();
@@ -125,8 +121,8 @@ $('button.replay').click(function () {
 });
 
 $('button.mute').click(function () {
-    noSoup.muted = true | false;
-    wantBread.muted = true | false;
+    noSoup.muted = true
+    wantBread.muted = true
 })
 
 // const $muteButton = $('button.mute');
